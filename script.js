@@ -17,16 +17,16 @@ let humanScore = 0,
 function playRound(humanChoice, computerChoice) {
     choicesResult.textContent = `${actions[humanChoice]} vs ${actions[computerChoice]}`;
     const result = (humanChoice - computerChoice) % 3;
-    if (result === 1 || result == -2) {
+    if (result === 1 || result === -2) {
         roundResult.textContent = "Bravo, you win!";
         humanScore += 1;
 
-    } else if (result === 2 || result == -1) {
+    } else if (result === 2 || result === -1) {
         roundResult.textContent = "Oh no, you lost :(";
         computerScore += 1;
 
     } else {
-        roundResult.textContent = "High Drama - it's a draw!";
+        roundResult.textContent = "Drama - it's a draw!";
     }
 
     scoreResults.textContent = `Score is ${humanScore} - ${computerScore}`;
